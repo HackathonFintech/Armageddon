@@ -6,131 +6,183 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.edge.weather.armageddon.CreateRoomActivity">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="1">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="방명"
         android:layout_marginBottom="5dp"
+        android:text="모임명"
 
         />
+
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/groupName"
-        android:layout_marginBottom="5dp"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="금액"
-        android:layout_marginBottom="5dp"
-        />
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/price"
-        android:layout_marginBottom="5dp"
-        />
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="회수일자"
         android:layout_marginBottom="5dp"
-        />
+        android:text="금액" />
+
     <EditText
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="회수일자" />
+
+    <EditText
+        android:id="@+id/withdrawDate"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:id="@+id/withdrawDate"
-        android:layout_marginBottom="5dp"
-        />
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:text="종료 날짜"
-        android:layout_marginBottom="5dp"
 
         />
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Date"
-            android:id="@+id/endDate"
-            android:layout_marginBottom="5dp"
-            />
 
 
-    <Spinner
-        android:id="@+id/selectPound"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="기타"
-        android:layout_marginBottom="5dp"
-        />
-
-    <EditText
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="12"
-        android:id="@+id/editTextEtc"
-        android:enabled="true"
-        android:minLines="3"
-        android:maxLines="3"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup">
 
-        android:hint="말을 적어주세요."
-        android:background="#fafafa"
 
-        android:focusable="true"
-        android:gravity="top"
-        android:padding="24dp"
 
+            <RadioButton
+                android:id="@+id/radioButtonMaturityPeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:checked="true"
+                android:text="만기기간"/>
+
+
+
+            <RadioButton
+                android:id="@+id/radioButtonMaturityPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="만기금액"/>
+
+
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/endDate"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Date"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/editTextMaturityPrice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/selectPound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/buttonExplanePopup"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:src="@android:drawable/ic_dialog_info" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        />
+        android:text="기타" />
+
+    <EditText
+        android:id="@+id/editTextEtc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="#fafafa"
+        android:ems="12"
+        android:enabled="true"
+        android:focusable="true"
+
+        android:gravity="top"
+        android:hint="말을 적어주세요."
+
+        android:inputType="textMultiLine"
+        android:maxLines="2"
+        android:minLines="2"
+
+        android:padding="24dp" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/agreeCreateRoom"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/agreeCreateRoom"/>
+            android:layout_height="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="동의 합니다."/>
+            android:text="동의 합니다." />
 
     </LinearLayout>
-
+</LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        >
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="확인"
             android:id="@+id/btnConfirm"
-            android:layout_weight="1"
-            />
-
-        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="취소"
             android:layout_weight="1"
-            android:id="@+id/btnCancel"/>
+            android:text="확인" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="취소" />
     </LinearLayout>
 </LinearLayout>
