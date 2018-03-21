@@ -56,7 +56,6 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
         checkAgreeCreateRoom = (CheckBox) findViewById(R.id.agreeCreateRoom);
         editTextMaturityPrice = (EditText) findViewById(R.id.editTextMaturityPrice);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-
         buttonExplanePopup = (FloatingActionButton) findViewById(R.id.buttonExplanePopup);
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -72,12 +71,7 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
             }
         });
 
-        buttonExplanePopup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new ExplaneTypeDialog(CreateRoomActivity.this);
-            }
-        });
+
 
         spinnerSelectPound.setAdapter(spinnerAdapter);
         spinnerSelectPound.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -96,7 +90,7 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
         btnConfirm.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
         btnEndDate.setOnClickListener(this);
-
+        buttonExplanePopup.setOnClickListener(this);
 
 
 
@@ -106,6 +100,9 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View view) {
         switch (view.getId()) {
 
+            case R.id.buttonExplanePopup:
+                new ExplaneTypeDialog(CreateRoomActivity.this);
+                break;
             case R.id.btnCancel:
                 finish();
                 break;

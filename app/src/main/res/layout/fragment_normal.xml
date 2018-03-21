@@ -1,0 +1,181 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    tools:context="com.edge.weather.armageddon.NormalFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그룹명 : "
+                />
+
+            <TextView
+                android:id="@+id/normalGroupName"
+                android:layout_weight="1"
+                android:text="아마곗돈"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="금액 : " />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/normalGroupPrice"
+                android:layout_weight="1"
+                android:text="30000$"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회수일자 : "
+                />
+
+            <TextView
+                android:id="@+id/normalWithdrawDate"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="26 day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/normalMaturityType"
+                android:layout_weight="2"
+                android:text="만기기간형"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="계 종류 : "
+                />
+
+            <TextView
+                android:id="@+id/normalSelectPound"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="일반계"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="현재 모인 금액 : "
+                        />
+
+                    <TextView
+                        android:id="@+id/normalCurrentSavingPrice"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="right"
+                        android:text="250,000$"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="목표까지 남은 금액 : "
+                        />
+
+                    <TextView
+                        android:id="@+id/normalRemainPrice"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="right"
+                        android:text="150,000$"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="목표 달성 시 금액 : "
+                        />
+
+                    <TextView
+                        android:id="@+id/normalSumPrice"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="right"
+                        android:text="400,000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="기타" />
+
+        <TextView
+            android:id="@+id/normalTextEtc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="우리 이걸로 하와이 가즈아~~~~!!!!"/>
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
