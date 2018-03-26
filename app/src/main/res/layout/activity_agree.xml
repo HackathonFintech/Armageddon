@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.pintech.SignActivity">
+    tools:context="com.example.user.newpintech.AgreeActivity">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
@@ -19,18 +19,53 @@
             android:layout_marginTop="13dp"
             android:background="@drawable/selector_fieldset_background"
             android:orientation="vertical" >
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="fill_parent"
-            android:layout_height="300px"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:background="@android:color/holo_red_dark"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="그룹방 상세설명데스네"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/android_card_view_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:elevation="4dp"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/cardview_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="18dp"
+                        android:src="@drawable/profile" />
+
+                    <TextView
+                        android:id="@+id/cardview_list_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/cardview_image"
+                        android:paddingBottom="5dp"
+                        android:text="아마곗돈모임"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/short_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview_list_title"
+                        android:layout_toRightOf="@+id/cardview_image"
+                        android:text="모아서 여행가자, 모아서 도와주자, 모아서 행복하자.!!"
+                        android:textColor="#8b8b8b" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
         </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -43,11 +78,13 @@
             android:layout_height="15dp"/>
         <TextView
             android:id="@+id/textview1"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="200px"
-            android:text="상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n"
-            android:textSize="15dp"
+            android:text="제 1조의 의거하여 해당 내용을 동의합니다."
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
             android:layout_margin="1dp"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/back"
             android:scrollbars="vertical"/>
         <CheckBox
@@ -55,13 +92,18 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="본인은 상위 내용에 동의함" />
-
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
         <TextView
             android:id="@+id/textview2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n"
-            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:text="제 2조의 의거하여 해당 내용을 동의합니다."
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="1dp"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/back"
             android:scrollbars="vertical"/>
 
@@ -92,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="서명하기" />
-         </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

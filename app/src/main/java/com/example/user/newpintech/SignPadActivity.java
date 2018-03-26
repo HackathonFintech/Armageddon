@@ -1,15 +1,13 @@
-package com.example.user.pintech;
-
-
+package com.example.user.newpintech;
 
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-        import android.widget.Button;
-        import android.widget.Toast;
+import android.widget.Button;
+import android.widget.Toast;
 
-        import com.github.gcacace.signaturepad.views.SignaturePad;
+import com.github.gcacace.signaturepad.views.SignaturePad;
 
 public class SignPadActivity extends AppCompatActivity {
     SignaturePad signaturePad;
@@ -18,7 +16,7 @@ public class SignPadActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signpad);
+        setContentView(R.layout.activity_sign_pad);
 
         signaturePad = (SignaturePad)findViewById(R.id.signaturePad);
         saveButton = (Button)findViewById(R.id.saveButton);
@@ -29,7 +27,7 @@ public class SignPadActivity extends AppCompatActivity {
         clearButton.setEnabled(false);
 
         //change screen orientation to landscape mode
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         signaturePad.setOnSignedListener(new SignaturePad.OnSignedListener() {
             @Override
@@ -54,7 +52,7 @@ public class SignPadActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //write code for saving the signature here
-                Toast.makeText(SignPadActivity.this, "Signature Saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignPadActivity.this, "서명이 저장되었습니다.", Toast.LENGTH_SHORT).show();
             }
         });
 

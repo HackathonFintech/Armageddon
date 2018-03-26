@@ -1,4 +1,4 @@
-package com.example.user.pintech;
+package com.example.user.newpintech;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +10,7 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SignActivity extends AppCompatActivity{
+public class AgreeActivity extends AppCompatActivity{
 
     CheckBox option1,option2;
     TextView textview1, textview2;
@@ -18,7 +18,7 @@ public class SignActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign);
+        setContentView(R.layout.activity_agree);
 
         option1 = (CheckBox) findViewById(R.id.option1);
         option2 = (CheckBox) findViewById(R.id.option2);
@@ -30,6 +30,7 @@ public class SignActivity extends AppCompatActivity{
         textview2.setMovementMethod(new ScrollingMovementMethod());
 
         Button btnOk = (Button) findViewById(R.id.OK);
+        Button btnFail = (Button) findViewById(R.id.Fail);
         btnOk.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 /*
@@ -44,5 +45,14 @@ public class SignActivity extends AppCompatActivity{
 
         });
 
+        btnFail.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                finish();
+            }
+
+        });
+
+
     }
 }
+

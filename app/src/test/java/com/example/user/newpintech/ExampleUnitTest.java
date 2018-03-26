@@ -1,4 +1,4 @@
-package com.edge.weather.armageddon;
+package com.example.user.newpintech;
 
 import org.junit.Test;
 
