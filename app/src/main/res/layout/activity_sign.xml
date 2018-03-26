@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.pintech.SignActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/selector_fieldset_background"
+            android:orientation="vertical" >
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="300px"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/holo_red_dark"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="그룹방 상세설명데스네"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="동 의 서"
+            android:textSize="30dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="fill_parent"
+            android:layout_height="200px"
+            android:text="상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n"
+            android:textSize="15dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/back"
+            android:scrollbars="vertical"/>
+        <CheckBox
+            android:id="@+id/option1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="본인은 상위 내용에 동의함" />
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n상기 본인은 어쩌구 저쩌구 아래 같은 서약에 동의합니다.\n"
+            android:textSize="15dp"
+            android:background="@drawable/back"
+            android:scrollbars="vertical"/>
+
+        <CheckBox
+            android:id="@+id/option2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="본인은 상위 내용에 동의함" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/Fail"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="뒤로가기" />
+            <View
+                android:layout_width="10dp"
+                android:layout_height="0dp"/>
+            <Button
+                android:id="@+id/OK"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="서명하기" />
+         </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
