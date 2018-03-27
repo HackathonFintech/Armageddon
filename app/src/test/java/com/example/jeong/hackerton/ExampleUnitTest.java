@@ -1,4 +1,4 @@
-package com.edge.weather.armageddon;
+package com.example.jeong.hackerton;
 
 import org.junit.Test;
 
