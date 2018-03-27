@@ -1,16 +1,13 @@
 <resources>
-<<<<<<< HEAD
+
 
     <string name="app_name">Armageddon</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_lookup_group">LookupGroupActivity</string>
-
-=======
-    <string name="app_name">Pintech</string>
     <string name="agreement">해당 세부내용에 동의합니다.</string>
     <string name="clear_pad">Clear Pad</string>
     <string name="save_signature">Save Signature</string>
->>>>>>> kwaksh
+
 </resources>

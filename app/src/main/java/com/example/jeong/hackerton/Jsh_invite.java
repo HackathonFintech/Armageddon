@@ -1,5 +1,6 @@
 package com.example.jeong.hackerton;
 
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,9 +10,11 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.edge.weather.armageddon.R;
+import com.example.user.newpintech.AgreeActivity;
 
 public class Jsh_invite extends AppCompatActivity {
 
+    private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,8 @@ public class Jsh_invite extends AppCompatActivity {
         invite_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                intent=new Intent(Jsh_invite.this, AgreeActivity.class);
+                startActivity(intent);
                 Toast.makeText(Jsh_invite.this, "초대하였습니다", Toast.LENGTH_SHORT).show();
             }
         });
@@ -40,6 +45,7 @@ public class Jsh_invite extends AppCompatActivity {
         cancel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Toast.makeText(Jsh_invite.this, "취소", Toast.LENGTH_SHORT).show();
 
             }

@@ -4,11 +4,9 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
     defaultConfig {
-<<<<<<< HEAD
+
         applicationId "com.example.jeong.hackerton"
-=======
         applicationId "com.example.user.newpintech"
->>>>>>> kwaksh
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1

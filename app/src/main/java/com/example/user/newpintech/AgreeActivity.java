@@ -10,6 +10,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.edge.weather.armageddon.R;
+
 public class AgreeActivity extends AppCompatActivity{
 
     CheckBox option1,option2;

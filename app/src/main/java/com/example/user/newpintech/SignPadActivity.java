@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.edge.weather.armageddon.R;
 import com.github.gcacace.signaturepad.views.SignaturePad;
 
 public class SignPadActivity extends AppCompatActivity {
