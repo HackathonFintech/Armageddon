@@ -2,6 +2,7 @@ package com.edge.weather.armageddon;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,7 +32,7 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
     private String selectitem;
     private RadioGroup radioGroup;
     private FloatingActionButton buttonExplanePopup;
-
+    private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,8 +119,18 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
                 } else if (checkAgreeCreateRoom.isChecked() == false) {
                     Toast.makeText(getApplicationContext(), "동의에 체크해주세요", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(getApplicationContext(), "생성", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getApplicationContext(), selectitem + "", Toast.LENGTH_SHORT).show();
+                    intent=getIntent();
+                    intent.putExtra("groupName",editGroupName.getText().toString());
+                    intent.putExtra("price",edirPrice.getText().toString());
+                    intent.putExtra("withdrawDate",editWithdrawDate.getText().toString());
+                    intent.putExtra("endDate",btnEndDate.getText().toString());
+                    intent.putExtra("editTextMaturityPrice",editTextMaturityPrice.getText().toString());
+                    intent.putExtra("selectitem",selectitem);
+                    intent.putExtra("editEtc",editEtc.getText().toString());
+
+                    setResult(0,intent);
+
+                    finish();
                 }
                 break;
             case R.id.endDate:

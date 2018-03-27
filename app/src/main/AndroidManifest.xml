@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreateRoomActivity" />
+        <activity android:name=".AccountRegisterActivity" />
         <activity
             android:name=".LookupGroupActivity"
             android:label="@string/title_activity_lookup_group"

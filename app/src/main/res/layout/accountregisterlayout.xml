@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/bankNametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="은행명"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/accountNametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="성명"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/accountNumbertxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계좌번호"
+        android:textSize="20dp" />
+
+</LinearLayout>
