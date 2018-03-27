@@ -17,6 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.edge.weather.armageddon.R;
+
 /**
  * Created by Jeong on 2018-03-22.
  */

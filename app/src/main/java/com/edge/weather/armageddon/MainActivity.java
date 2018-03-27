@@ -20,6 +20,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jeong.hackerton.Jsh_history;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final int RESULT_CODE=0;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonCreateRoomActivity, buttonReferenceActivity,createGroupBtn;
     private Intent intent;
     private LinearLayout.LayoutParams params;
-    private TextView txt_register;
+    private TextView txt_register,txt_search;
     private int index =0;
     @SuppressLint("ResourceType")
     @Override
@@ -44,6 +46,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View view) {
                 intent=new Intent(MainActivity.this,AccountRegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txt_search=(TextView)findViewById(R.id.txt_search);
+        txt_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent=new Intent(MainActivity.this,Jsh_history.class);
                 startActivity(intent);
             }
         });

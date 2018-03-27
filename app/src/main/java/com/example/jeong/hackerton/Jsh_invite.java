@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.edge.weather.armageddon.R;
+
 public class Jsh_invite extends AppCompatActivity {
 
     @Override

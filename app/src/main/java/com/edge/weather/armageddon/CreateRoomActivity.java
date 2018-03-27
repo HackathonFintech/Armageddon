@@ -19,6 +19,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.jeong.hackerton.Jsh_invite;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -127,10 +129,10 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
                     intent.putExtra("editTextMaturityPrice",editTextMaturityPrice.getText().toString());
                     intent.putExtra("selectitem",selectitem);
                     intent.putExtra("editEtc",editEtc.getText().toString());
-
                     setResult(0,intent);
-
                     finish();
+                    intent=new Intent(CreateRoomActivity.this, Jsh_invite.class);
+                    startActivity(intent);
                 }
                 break;
             case R.id.endDate:

@@ -9,6 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.edge.weather.armageddon.R;
+
 import java.util.ArrayList;
 
 /**

@@ -6,6 +6,8 @@ import android.widget.CheckBox;
 import android.widget.Checkable;
 import android.widget.LinearLayout;
 
+import com.edge.weather.armageddon.R;
+
 public class CheckableLinearLayout extends LinearLayout implements Checkable {
 
     // 만약 CheckBox가 아닌 View를 추가한다면 아래의 변수 사용 가능.
