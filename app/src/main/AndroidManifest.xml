@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.edge.weather.armageddon">
+    package="com.example.user.newpintech">
 
     <application
         android:allowBackup="true"
@@ -9,14 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
 
         <activity android:name=".MainActivity">
+=======
+        <activity android:name=".AgreeActivity">
+>>>>>>> kwaksh
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
 
         <activity android:name=".CreateRoomActivity" />
         <activity android:name=".AccountRegisterActivity" />
@@ -27,6 +32,9 @@
             android:label="@string/title_activity_lookup_group"
             android:theme="@style/AppTheme"></activity>
 
+=======
+        <activity android:name=".SignPadActivity"></activity>
+>>>>>>> kwaksh
     </application>
 
 </manifest>
