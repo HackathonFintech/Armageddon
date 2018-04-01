@@ -1,12 +1,10 @@
 package com.edge.weather.armageddon;
 
-import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,12 +12,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import com.example.jeong.hackerton.Jsh_invite;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -34,6 +29,7 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
     private String selectitem;
     private RadioGroup radioGroup;
     private FloatingActionButton buttonExplanePopup;
+    private boolean radioSelect;
     private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,14 +63,14 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
                 if(i==R.id.radioButtonMaturityPeriod){
                     editTextMaturityPrice.setVisibility(View.GONE);
                     btnEndDate.setVisibility(View.VISIBLE);
+                    radioSelect = false;
                 }else{
                     editTextMaturityPrice.setVisibility(View.VISIBLE);
                     btnEndDate.setVisibility(View.GONE);
+                    radioSelect = true;
                 }
             }
         });
-
-
 
         spinnerSelectPound.setAdapter(spinnerAdapter);
         spinnerSelectPound.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -83,7 +79,6 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
 
                 selectitem = spinnerSelectPound.getItemAtPosition(i).toString();
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
@@ -94,15 +89,11 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
         btnCancel.setOnClickListener(this);
         btnEndDate.setOnClickListener(this);
         buttonExplanePopup.setOnClickListener(this);
-
-
-
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-
             case R.id.buttonExplanePopup:
                 new ExplaneTypeDialog(CreateRoomActivity.this);
                 break;
@@ -116,8 +107,9 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
                     Toast.makeText(getApplicationContext(), "금액을 입력해주세요", Toast.LENGTH_SHORT).show();
                 } else if (editWithdrawDate.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "회수일자를 지정해주세요", Toast.LENGTH_SHORT).show();
-                } else if (btnEndDate.getText().toString().equals("Date")) {
-                    Toast.makeText(getApplicationContext(), "종료 날짜를 지정해주세요", Toast.LENGTH_SHORT).show();
+                } else if (btnEndDate.getText().toString().equals("Date")
+                        &&editTextMaturityPrice.getText().toString().equals("")) {
+                    Toast.makeText(getApplicationContext(), "만기 날짜 또는 만기 금액을 지정해주세요", Toast.LENGTH_SHORT).show();
                 } else if (checkAgreeCreateRoom.isChecked() == false) {
                     Toast.makeText(getApplicationContext(), "동의에 체크해주세요", Toast.LENGTH_SHORT).show();
                 } else {
@@ -129,10 +121,11 @@ public class CreateRoomActivity extends AppCompatActivity implements View.OnClic
                     intent.putExtra("editTextMaturityPrice",editTextMaturityPrice.getText().toString());
                     intent.putExtra("selectitem",selectitem);
                     intent.putExtra("editEtc",editEtc.getText().toString());
+                    intent.putExtra("radioDatePrice",radioSelect);
+
                     setResult(0,intent);
+
                     finish();
-                    intent=new Intent(CreateRoomActivity.this, Jsh_invite.class);
-                    startActivity(intent);
                 }
                 break;
             case R.id.endDate:
