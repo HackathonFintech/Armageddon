@@ -152,10 +152,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             CategoryView.setGravity(Gravity.CENTER);
             CategoryView.setLayoutParams(params);
 
-
-
-
-
             Button modify=new Button(this);
             modify.setText("수정");
             modify.setGravity(Gravity.RIGHT);
